@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos | Alpaca Fashion</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="contenedor nav">
+      <a href="index.html" class="logo">
+        <span class="logo-icono">AF</span>
+        <span class="marca-titulo">Alpaca Fashion</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="productos.html" class="nav-link activo">Catálogo</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li>
+          <a href="carrito.html" class="btn-carrito-nav">
+            🛒 Carrito <span class="contador-badge" id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- SECCIÓN CATÁLOGO -->
+  <main class="seccion">
+    <div class="contenedor">
+      <h1 class="titulo-seccion">Catálogo Oficial de Prendas</h1>
+      <p class="subtitulo-seccion">Filtra, busca y ordena nuestra colección en tiempo real</p>
+
+      <!-- BARRA DE FILTROS Y BÚSQUEDA -->
+      <div class="barra-filtros">
+        <div class="grupo-filtro">
+          <label for="buscador-nombre">Buscar prenda por nombre:</label>
+          <input type="search" id="buscador-nombre" class="input-control" placeholder="Ej. Sweater, Poncho, Abrigo...">
+        </div>
+
+        <div class="grupo-filtro">
+          <label for="filtro-categoria">Categoría:</label>
+          <select id="filtro-categoria" class="input-control">
+            <option value="todas">Todas las categorías</option>
+          </select>
+        </div>
+
+        <div class="grupo-filtro">
+          <label for="filtro-disponibilidad">Disponibilidad en Stock:</label>
+          <select id="filtro-disponibilidad" class="input-control">
+            <option value="todos">Todos los productos</option>
+            <option value="disponibles">Solo disponibles (En stock)</option>
+            <option value="agotados">Productos agotados (Sin stock)</option>
+          </select>
+        </div>
+
+        <div class="grupo-filtro">
+          <label for="orden-precio">Ordenar por precio (Bs):</label>
+          <select id="orden-precio" class="input-control">
+            <option value="defecto">Orden por defecto</option>
+            <option value="asc">Precio: Menor a Mayor</option>
+            <option value="desc">Precio: Mayor a Menor</option>
+          </select>
+        </div>
+
+        <div style="display:flex; align-items:flex-end;">
+          <button id="btn-limpiar-filtros" class="btn btn-secundario" style="height:42px;">
+            Limpiar
+          </button>
+        </div>
+      </div>
+
+      <!-- CONTADOR DE RESULTADOS -->
+      <div style="margin-bottom: 1.2rem; font-size: 0.92rem; color: var(--texto-suave);" id="contador-resultados">
+        Cargando catálogo...
+      </div>
+
+      <!-- GRILLA DE TARJETAS DE PRODUCTOS -->
+      <div class="grid-productos" id="contenedor-productos">
+        <!-- Tarjetas generadas por js/productos.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-grid">
+        <div>
+          <h4 class="marca-titulo" style="font-size:1.3rem;">Alpaca Fashion</h4>
+          <p style="font-size:0.9rem; color:#D6D3D1;">
+            Calidad de exportación en tejidos de fibra de alpaca desde Oruro para toda Bolivia.
+          </p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul style="list-style:none; font-size:0.9rem; line-height:2;">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Atención al Cliente</h4>
+          <p style="font-size:0.9rem; color:#D6D3D1;">
+            Lunes a Sábado: 09:00 a 20:00<br>
+            Envíos garantizados a los 9 departamentos.
+          </p>
+        </div>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 Alpaca Fashion — Instituto Técnico Jesús María (Oruro, Bolivia).
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/productos.js"></script>
+</body>
+</html>

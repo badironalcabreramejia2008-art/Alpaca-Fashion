@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras | Alpaca Fashion</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="contenedor nav">
+<a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo Alpaca Fashion" class="logo-img">
+      <span class="marca-titulo">Alpaca Fashion</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="productos.html" class="nav-link">Catálogo</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li>
+          <a href="carrito.html" class="btn-carrito-nav">
+            🛒 Carrito <span class="contador-badge" id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- SECCIÓN CARRITO -->
+  <main class="seccion">
+    <div class="contenedor">
+      <h1 class="titulo-seccion">Tu Carrito de Compras</h1>
+      <p class="subtitulo-seccion">Administra las prendas seleccionadas antes de confirmar tu pedido</p>
+
+      <div style="display:grid; grid-template-columns: 2fr 1fr; gap: 1.8rem; align-items: start;" class="grid-dos-columnas">
+        <div id="carrito-contenido">
+          <!-- Renderizado dinámicamente por js/carrito.js -->
+        </div>
+        <div id="carrito-resumen">
+          <!-- Resumen renderizado por js/carrito.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-copy">
+        &copy; 2026 Alpaca Fashion — Instituto Técnico Jesús María (Oruro, Bolivia).
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>

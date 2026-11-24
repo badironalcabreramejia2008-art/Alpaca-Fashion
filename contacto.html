@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Alpaca Fashion</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <div class="contenedor nav">
+<a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo Alpaca Fashion" class="logo-img">
+      <span class="marca-titulo">Alpaca Fashion</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="productos.html" class="nav-link">Catálogo</a></li>
+        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav-link activo">Contacto</a></li>
+        <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li>
+          <a href="carrito.html" class="btn-carrito-nav">
+            🛒 Carrito <span class="contador-badge" id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE CONTACTO -->
+  <main class="seccion">
+    <div class="contenedor">
+      <h1 class="titulo-seccion">Contáctanos</h1>
+      <p class="subtitulo-seccion">Escríbenos para consultas sobre tallas, pedidos especiales o ventas al por mayor</p>
+
+      <div class="grid-dos-columnas" style="align-items: flex-start;">
+        <!-- FORMULARIO CON VALIDACIÓN JS -->
+        <div class="panel-card">
+          <h3>Envíanos un Mensaje</h3>
+          <form id="form-contacto" novalidate>
+            <div class="form-grupo">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" class="input-control" style="width:100%;" placeholder="Ej. Badi Cabrera Mejía">
+              <small class="error-msg" id="error-nombre">Por favor, ingresa tu nombre completo (mínimo 3 caracteres).</small>
+            </div>
+
+            <div class="form-grupo">
+              <label for="correo">Correo electrónico *</label>
+              <input type="email" id="correo" class="input-control" style="width:100%;" placeholder="ejemplo@correo.com">
+              <small class="error-msg" id="error-correo">Ingresa un correo electrónico válido.</small>
+            </div>
+
+            <div class="form-grupo">
+              <label for="celular">Número de celular (Bolivia) *</label>
+              <input type="tel" id="celular" class="input-control" style="width:100%;" placeholder="Ej. 61816846">
+              <small class="error-msg" id="error-celular">Ingresa un número de celular válido de 8 dígitos (inicia con 6 o 7).</small>
+            </div>
+
+            <div class="form-grupo">
+              <label for="asunto">Asunto *</label>
+              <input type="text" id="asunto" class="input-control" style="width:100%;" placeholder="Consulta de stock / Pedido especial">
+              <small class="error-msg" id="error-asunto">El asunto es obligatorio.</small>
+            </div>
+
+            <div class="form-grupo">
+              <label for="mensaje">Mensaje *</label>
+              <textarea id="mensaje" rows="4" class="input-control" style="width:100%; resize:vertical;" placeholder="Escribe aquí tu consulta detallada..."></textarea>
+              <small class="error-msg" id="error-mensaje">El mensaje debe contener al menos 10 caracteres.</small>
+            </div>
+
+            <button type="submit" class="btn btn-primario" style="width:100%;">Enviar Formulario</button>
+
+            <!-- MENSAJE DE CONFIRMACIÓN SIMULADO -->
+            <div id="mensaje-exito" style="display:none; margin-top:1.2rem; padding:1rem; border-radius:8px; background:#E6F4EA; color:var(--exito); font-weight:600; text-align:center;">
+              ¡Mensaje enviado con éxito! Nuestro equipo se comunicará contigo a la brevedad.
+            </div>
+          </form>
+        </div>
+
+        <!-- INFORMACIÓN DE CONTACTO Y REDES SOCIALES -->
+        <div>
+          <div class="card-info">
+            <h3 style="margin-bottom:0.8rem; color:var(--primario-oscuro);">Información de Atención</h3>
+            <p style="margin-bottom:0.6rem;"><strong>📍 Dirección Showroom:</strong> Calle Bolívar entre 6 de Octubre y Soria Galvarro, Zona Central, Oruro - Bolivia.</p>
+            <p style="margin-bottom:0.6rem;"><strong>📞 Teléfono / WhatsApp:</strong> +591 61816846</p>
+            <p style="margin-bottom:0.6rem;"><strong>✉️ Correo Oficial:</strong> contacto@alpacafashion.bo</p>
+            <p><strong>🕒 Horario:</strong> Lunes a Sábado de 09:00 a 20:00 hrs.</p>
+          </div>
+
+          <div class="card-info">
+            <h3 style="margin-bottom:0.8rem; color:var(--primario-oscuro);">Síguenos en Redes Sociales</h3>
+            <p style="color:var(--texto-suave); margin-bottom:1rem; font-size:0.9rem;">
+              Conoce nuestras nuevas colecciones y promociones de temporada en nuestros canales oficiales:
+            </p>
+            <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="btn btn-secundario">Facebook</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-secundario">Instagram</a>
+              <a href="https://tiktok.com" target="_blank" rel="noopener" class="btn btn-secundario">TikTok</a>
+              <a href="https://wa.me/59161816846" target="_blank" rel="noopener" class="btn btn-primario">WhatsApp Directo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer-copy">
+        &copy; 2026 Alpaca Fashion — Instituto Técnico Jesús María (Oruro, Bolivia).
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>
